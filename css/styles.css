@@ -332,34 +332,6 @@ nav a:hover, nav a.active {
     transform: translateX(3px);
 }
 
-.read-more {
-    display: inline-flex;
-    align-items: center;
-    background-color: #ff1616; /* Warna merah yang sama dengan Trending Review */
-    color: white;
-    font-size: 14px;
-    padding: 6px 15px;
-    border-radius: 30px; /* Membuat bentuk bulat di kanan kiri */
-    text-align: center;
-    font-weight: 500;
-    margin: 0 20px 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 5px rgba(255, 22, 22, 0.3);
-}
-
-.read-more svg {
-    margin-left: 5px;
-    transition: transform 0.3s;
-}
-
-.read-more:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 22, 22, 0.4);
-}
-
-.read-more:hover svg {
-    transform: translateX(3px);
-}
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
