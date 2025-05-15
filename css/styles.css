@@ -223,14 +223,29 @@ nav a:hover, nav a.active {
     margin-bottom: 40px;
 }
 
-.section-title h2 {
+.section-title h2, .trending-button {
     display: inline-block;
-    background-color: #ff3a3a;
+    background-color: var(--primary-red);
     color: white;
     padding: 10px 30px;
     border-radius: 30px;
     font-size: 1.8rem;
     margin: 0;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 49, 49, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trending-button {
+    font-size: 1.2rem;
+    padding: 8px 25px;
+}
+
+.trending-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 49, 49, 0.4);
+    background-color: #e62e2e;
 }
 
 /* Review Cards Improvements */
@@ -289,13 +304,18 @@ nav a:hover, nav a.active {
 }
 
 .read-more {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    color: #ff3a3a;
-    font-weight: 600;
+    background-color: #ff1616; /* Warna merah yang sama dengan Trending Review */
+    color: white;
+    font-size: 14px;
+    padding: 6px 15px;
+    border-radius: 30px; /* Membuat bentuk bulat di kanan kiri */
+    text-align: center;
+    font-weight: 500;
     margin: 0 20px 20px;
-    transition: color 0.3s;
-    font-size: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(255, 22, 22, 0.3);
 }
 
 .read-more svg {
@@ -304,11 +324,12 @@ nav a:hover, nav a.active {
 }
 
 .read-more:hover {
-    color: #e62e2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 22, 22, 0.4);
 }
 
 .read-more:hover svg {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 /* Responsive Adjustments */
@@ -543,20 +564,33 @@ nav a:hover, nav a.active {
 }
 
 .more-button {
-    background-color: var(--primary-red);
+    display: flex;
+    align-items: center;
     color: white;
+    background-color: var(--primary-red);
     font-size: 13px;
     padding: 8px 16px;
     border-radius: 9999px;
-    display: inline-block;
     margin: 10px 20px 20px;
-    text-align: center;
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .more-button:hover {
-    background-color: #d32f2f;
+    color: var(--primary-red);
+    background-color: #f5f5f5;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tambahkan ikon panah untuk tombol more-button */
+.more-button::after {
+    content: "→";
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.more-button:hover::after {
+    transform: translateX(5px);
 }
 
 /* Perbaikan untuk kategori makanan */
